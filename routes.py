@@ -12,5 +12,5 @@ def main():
 
 """ NOTE: Rotas post da API -> """
 @router.post('/audio-to-json')
-def product_audio_to_json(params: AudioToJsonModel = Depends(AudioToJsonModel.get_form)):
+def audio_to_json(params: AudioToJsonModel = Depends(AudioToJsonModel.get_form)):
     return AudioToJsonController(params).audio_to_json()
