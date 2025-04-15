@@ -1,0 +1,10 @@
+openai-whisper==20240930
+openai==1.74.0
+uvicorn==0.34.1
+python-dotenv==1.1.0
+fastapi==0.115.12
+PyJWT==2.10.1
+python-multipart==0.0.20
+SpeechRecognition==3.14.2
+pydub==0.25.1
+faster-whisper==1.1.1

@@ -1,0 +1,7 @@
+venv
+tmp
+test
+*__pycache__*
+jupyter
+errors.log
+.env
