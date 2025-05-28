@@ -1,5 +1,6 @@
 from src.utils.FileUtil import FileUtil
 from src.services.OpenAIService import OpenAIService
+from src.services.GeminiService import GeminiService
 from src.services.AudioToTextService import AudioToTextService
 from src.utils.PromptUtil import PromptUtil
 import json
@@ -19,12 +20,13 @@ class AudioToJsonController:
         # text = audio_service.transcribe_audio_faster_whisper(audio_path) # Rápido porém eficácia mediana 
         text = audio_service.transcribe_audio_google(audio_path) # Rápido e eficácia boa
 
-        openai_service = OpenAIService()
+        # llm_service = OpenAIService() # Usa o llm da OpenAI 
+        llm_service = GeminiService() # Usa o llm da google
 
         match self.params.type:
             case 'product-register':
                 prompt = PromptUtil.get_prompt_product_register()
-                result = openai_service.call_openai_api(prompt, text)
+                result = llm_service.call_llm_api(prompt, text)
             case _:
                 raise Exception('Not found type')
     

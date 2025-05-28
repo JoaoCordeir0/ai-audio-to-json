@@ -8,6 +8,7 @@ class PromptUtil:
         - Nome comercial do produto;
         - Variedade do produto;
         - Descrição do produto;
+        - Link de uma imagem real que seja publica que tenha relação com o nome do produto.
 
         Encontre essas informações e responda no formato JSON a seguir:
         {
@@ -15,5 +16,6 @@ class PromptUtil:
             "comercial_name": "Nome comercial do produto",
             "variety": "Variedade do produto",
             "description": "Descrição do produto"
+            "img_link": "Encontre na internet uma imagem real que seja publica e tenha relação com o nome do produto e coloque aqui o link dessa imagem"
         }"""
         return prompt

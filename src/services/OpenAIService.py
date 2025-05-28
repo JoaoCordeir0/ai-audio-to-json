@@ -13,7 +13,7 @@ class OpenAIService:
         self.api_version = os.getenv('OPENAI_API_VERSION')
         self.azure_endpoint = os.getenv('OPENAI_API_ENDPOINT')
         
-    def call_openai_api(self, system_message, user_message):                
+    def call_llm_api(self, system_message, user_message):                
         client = AzureOpenAI(
             api_key=self.api_key,
             api_version=self.api_version,
