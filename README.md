@@ -13,3 +13,6 @@ pip install -r requirements.txt
 ```bash
 uvicorn main:app --reload
 ```
+
+## Gerar a chave do google
+> https://aistudio.google.com/apikey
